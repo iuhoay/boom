@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html id="app">
+<head>
+  <title>{{title}}</title>
+  <script src="https://cdn.jsdelivr.net/vue/latest/vue.js"></script>
+  <style>
+    .container {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>{{title}}</h1>
+    <div class="form">
+      <div class="input-group">
+        <label for="">狗粮重量</label>
+        <input type="text" v-model="total">
+        g
+      </div>
+      <div class="input-group">
+        <label for="">每天要吃</label>
+        <input type="text" v-model="daily">
+        g
+      </div>
+      <p>你的狗粮还剩 {{total/daily}} 天</p>
+    </div>
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        title: '狗粮计算器'
+      }
+    })
+  </script>
+</body>
+</html>
