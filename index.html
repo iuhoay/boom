@@ -24,6 +24,8 @@
         g
       </div>
       <p>你的狗粮还剩 {{total/daily}} 天</p>
+      <img v-bind:src="dog.avatar">
+      <p>{{dog.name}}</p>
     </div>
   </div>
 
@@ -31,7 +33,12 @@
     new Vue({
       el: '#app',
       data: {
-        title: '狗粮计算器'
+        title: '狗粮计算器',
+        dog: {
+          name: '暴暴',
+          avatar: 'asserts/images/dog.png',
+          birthday: '2016-02-07',
+        },
       }
     })
   </script>
