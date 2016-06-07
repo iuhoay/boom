@@ -2,15 +2,12 @@
 <html id="app">
 <head>
   <title>{{title}}</title>
+  <link href="//cdn.bootcss.com/normalize/4.1.1/normalize.min.css" rel="stylesheet">
+  <link href="app/app.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/vue/latest/vue.js"></script>
-  <style>
-    .container {
-      text-align: center;
-    }
-  </style>
 </head>
 <body>
-  <div class="container">
+  <div class="container text-center">
     <h1>{{title}}</h1>
     <div class="form">
       <div class="input-group">
@@ -24,23 +21,23 @@
         g
       </div>
       <p>你的狗粮还剩 {{total/daily}} 天</p>
+    </div>
+    <div class="">
       <img v-bind:src="dog.avatar">
       <p>{{dog.name}}</p>
     </div>
   </div>
 
-  <script>
-    new Vue({
-      el: '#app',
-      data: {
-        title: '狗粮计算器',
-        dog: {
-          name: '暴暴',
-          avatar: 'asserts/images/dog.png',
-          birthday: '2016-02-07',
-        },
-      }
-    })
-  </script>
+  <div class="container">
+    <h2>狗粮-干粮</h2>
+    <ul class="dry-foods">
+      <li v-for="food in dry_foods">
+        <strong>{{food.name}} {{food.review}}</strong>
+        <p>{{food.describe}}</p>
+      </li>
+    </ul>
+  </div>
+
+  <script src="app/app.js" charset="utf-8"></script>
 </body>
 </html>
