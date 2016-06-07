@@ -1,13 +1,3 @@
-# 狗粮计算器
+# 暴暴 (boom)
 
-a toy for Vue
-
-
-## Start
-
-```
-$ vue init simple dog-food
-$ cd dog-food
-$ npm install -g live-server
-$ live-server
-```
+一只雪纳瑞

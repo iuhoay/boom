@@ -1,11 +1,17 @@
 new Vue({
   el: '#app',
   data: {
-    title: '狗粮计算器',
+    title: '暴暴 (boom)',
     dog: {
       name: '暴暴',
       avatar: 'asserts/images/dog.png',
       birthday: '2016-02-07',
+      weights: [
+        {
+          date: '2016-06-04',
+          weight: '5',
+        }
+      ]
     },
     dry_foods: [
       {

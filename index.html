@@ -9,6 +9,8 @@
 <body>
   <div class="container text-center">
     <h1>{{title}}</h1>
+    <img v-bind:src="dog.avatar">
+
     <div class="form">
       <div class="input-group">
         <label for="">狗粮重量</label>
@@ -20,12 +22,15 @@
         <input type="text" v-model="daily">
         g
       </div>
-      <p>你的狗粮还剩 {{total/daily}} 天</p>
+      <p>你的狗粮还剩 {{total/daily || 0}} 天</p>
     </div>
-    <div class="">
-      <img v-bind:src="dog.avatar">
-      <p>{{dog.name}}</p>
-    </div>
+  </div>
+
+  <div class="container">
+    <h2>体重记录</h2>
+    <ul class="weights">
+      <li v-for="weight in dog.weights">{{weight.weight}} kg - <small>{{weight.date}}</small></li>
+    </ul>
   </div>
 
   <div class="container">
