@@ -1,3 +1,3 @@
 # 暴暴 (boom)
 
-一只雪纳瑞
+![asserts/images/dog.png](asserts/images/dog.png)
