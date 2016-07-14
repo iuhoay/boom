@@ -1,0 +1,17 @@
+{
+  "name": "boom",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iuhoay/boom.git"
+  },
+  "devDependencies": {
+    "live-server": "^1.0.0"
+  },
+  "scripts": {
+    "start": "live-server"
+  },
+  "homepage": "https://github.com/iuhoay/boom#readme",
+  "version": "1.0.0",
+  "dependencies": {},
+  "author": "iuhoay <iuhoay@gmail.com>"
+}
