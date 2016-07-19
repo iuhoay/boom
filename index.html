@@ -4,36 +4,42 @@
   <title>{{title}}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <link href="//cdn.bootcss.com/normalize/4.1.1/normalize.min.css" rel="stylesheet">
-  <link href="app/app.css" rel="stylesheet">
   <link rel="apple-touch-icon-precomposed" sizes="180x180" href="asserts/images/icon.png">
+  <link href="asserts/stylesheet/hack.css" rel="stylesheet" />
   <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
 </head>
-<body>
-  <div class="container text-center">
+<body class="hack">
+  <div class="main container">
     <h1>{{title}}</h1>
     <img v-bind:src="dog.avatar">
 
-    <div class="form">
-      <div class="input-group">
+    <form class="form">
+      <fieldset class="form-group">
         <label for="">狗粮重量</label>
-        <input type="text" v-model="total">
-        g
-      </div>
-      <div class="input-group">
+        <input type="text" v-model="total" class="form-control">
+      </fieldset>
+      <fieldset class="form-group">
         <label for="">每天要吃</label>
-        <input type="text" v-model="daily">
-        g
-      </div>
-      <p>你的狗粮还剩 {{total/daily || 0}} 天</p>
-    </div>
+        <input type="text" v-model="daily" class="form-control">
+      </fieldset>
+    </form>
+    <p>你的狗粮还剩 {{total/daily || 0}} 天</p>
   </div>
 
   <div class="container">
     <h2>体重记录</h2>
-    <ul class="weights">
-      <li v-for="weight in weights">{{weight.weight}} kg - <small>{{weight.date}}</small></li>
-    </ul>
+    <table>
+      <thead>
+        <tr>
+          <th>kg</th>
+          <th>date</th>
+        </tr>
+        <tr v-for="weight in weights">
+          <td>{{weight.weight}} kg</td>
+          <td>{{weight.date}}</td>
+        </tr>
+      </thead>
+    </table>
   </div>
 
   <div class="container">

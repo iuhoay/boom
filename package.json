@@ -12,6 +12,8 @@
   },
   "homepage": "https://github.com/iuhoay/boom#readme",
   "version": "1.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "hack": "^0.4.2"
+  },
   "author": "iuhoay <iuhoay@gmail.com>"
 }
