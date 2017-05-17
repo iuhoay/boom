@@ -6,12 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="apple-touch-icon-precomposed" sizes="180x180" href="asserts/images/icon.png">
   <link href="asserts/stylesheet/hack.css" rel="stylesheet" />
+  <link href="app/app.css" rel="stylesheet" />
   <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
 </head>
 <body class="hack">
   <div class="main container">
     <h1>{{title}}</h1>
     <img v-bind:src="dog.avatar">
+
+    <div v-for="image in dog.images" class="images">
+      <img src="{{image.path}}" />
+      {{image.text}}
+    </div>
 
     <form class="form">
       <fieldset class="form-group">
@@ -52,21 +58,12 @@
     </ul>
   </div>
 
+  <div class="footer container">
+    &copy; iuhoay
+    <a href='https://github.com/iuhoay/boom'>github</a>
+  </div>
+
   <script src="https://cdn1.lncld.net/static/js/av-min-1.0.0.js"></script>
   <script src="app/app.js" charset="utf-8"></script>
-
-  <div class="ds-thread container" data-thread-key="{{dog.name}}" data-title="{{title}}" data-url="http://iuhoay.github.io/boom/"></div>
-  <script type="text/javascript">
-  var duoshuoQuery = {short_name:"boom-iuhoay"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.unstable.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0]
-    || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-  </script>
-
 </body>
 </html>

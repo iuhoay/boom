@@ -4,8 +4,12 @@ var app = new Vue({
     title: '暴暴 (boom)',
     dog: {
       name: '暴暴',
-      avatar: 'asserts/images/dog.png',
       birthday: '2016-02-07',
+      images: [
+        { path: 'asserts/images/2016-05-24.jpg', text: '第一次见面' },
+        { path: 'asserts/images/2016-09-07.jpg', text: '夏天很热，毛长了的样子' },
+        { path: 'asserts/images/2017-04-22.jpg', text: '一岁2个月，有意义的一天' }
+      ]
     },
     weights: [],
     dry_foods: [],
